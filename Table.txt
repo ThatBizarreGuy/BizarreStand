@@ -1,0 +1,127 @@
+--[[
+
+██████╗ ██╗███████╗ █████╗ ██████╗ ██████╗ ███████╗    ██╗   ██╗  ██████╗ 
+██╔══██╗██║╚══███╔╝██╔══██╗██╔══██╗██╔══██╗██╔════╝    ██║   ██║  ╚════██╗
+██████╔╝██║  ███╔╝ ███████║██████╔╝██████╔╝█████╗      ██║   ██║   █████╔╝
+██╔══██╗██║ ███╔╝  ██╔══██║██╔══██╗██╔══██╗██╔══╝      ╚██╗ ██╔╝  ██╔═══╝ 
+██████╔╝██║███████╗██║  ██║██║  ██║██║  ██║███████╗     ╚████╔╝██╗███████╗
+╚═════╝ ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝      ╚═══╝ ╚═╝╚══════╝
+                                                                          
+██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗                        
+██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝                        
+██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗                          
+██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝                          
+╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗                        
+ ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝                        
+                                                                          
+https://discord.gg/bizarre-stand
+https://discord.gg/cCrMDf2h8P
+
+--]]
+
+
+
+getgenv().OWNER = "MrDummyl"
+
+getgenv().PRIVATESTAND = {
+    ['MAIN'] = {
+      ["ALT"]       = "Nulldummkopfff4",  -- Required, only put in one of your alts (if you use multiple alts only put in one of the alts users)
+      ["FPS"]       = 40,          -- Cap Stands fps (40 recommended)
+      ['ATTACK']    = 'Heavy!',    -- Attack type (can be changed in game)
+      ['AUTOMASK']  = true,        -- automask for the stand (true or false)
+      ['MASK']      = {Surgeon = false, Paintball = true}, -- Wich mask the stand should use (Keep 1 at true)
+      ['FLYANIM']   = {Fly = true, Glide = false}, -- Keep 1 as true
+      ['CHATTING']  = true,        -- If the stand should write stuff like "I'm here Master!" when u summon it
+      ['POSITION']  = "Right",     -- Position of the stand, u can change it ingame [Left,Middle,Right]
+      ["CREWID"]    = "17121294",-- The crew id the alt is going to join
+      ['NOCLIP']    = {SYNAPSE = true, OFFSET = -3.05}, -- No Clip
+    }
+}
+
+
+
+--[[
+
+Customize your commands, you can change the "prefix" or command name here. (sounds is changable)
+Example:
+
+["SUMMON"]        =   {CMD = "Appear!", GUISOUND = "1208371231203",  STANDSOUND = "234012973192"},
+
+--]]
+getgenv().COMMANDS = {
+    ['MAIN'] = {
+      ["SUMMON"]        =   {CMD = "star platinum!", GUISOUND = "5684695930",  STANDSOUND = "5684695930"}, --Summons your stand
+      ["VANISH"]        =   {CMD = "vanish!",        GUISOUND = "1228181736",  STANDSOUND = "3431631978"}, --Hides your stand
+      ["ATTACK"]        =   {CMD = "attack!",        GUISOUND = "0000000000",  STANDSOUND = "6678126154"}, --Stand starts attacking
+      ["UNATTACK"]      =   {CMD = "unattack!",      GUISOUND = "0000000000",  STANDSOUND = "1012554393"}, --Stand stops attacking
+      ["AURA"]          =   {CMD = "aura!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand attacks underground                           
+      ["UNAURA"]        =   {CMD = "unaura!",        GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand stops attacking underground                
+      ["BARRAGE"]       =   {CMD = "barrage!",       GUISOUND = "5600185403",  STANDSOUND = "6678126154"}, --Stand starts barraging           
+      ["UNBARRAGE"]     =   {CMD = "unbarrage!",     GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand stops barraging
+      ["HEAVY"]         =   {CMD = "heavy!",         GUISOUND = "0000000000",  STANDSOUND = "876800936"}, --Changes the attack tipe to heavy
+      ["LIGHT"]         =   {CMD = "light!",         GUISOUND = "0000000000",  STANDSOUND = "876800936"}, --Changes the attack tipe to light
+      ["STOMP"]         =   {CMD = "stomp!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Kills and stomps the target        
+      ["BRING"]         =   {CMD = "bring!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Brings the target
+      ["GOTO"]          =   {CMD = "goto!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Brings the owner to a target/place
+      ["HEAL"]          =   {CMD = "heal!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Heals the stand (if low)
+      ["CHECK"]         =   {CMD = "check!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Checks if a target is in the server
+      ["BAG"]           =   {CMD = "bag!",           GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Bags the target
+      ["ORA"]           =   {CMD = "ora!",           GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --TPs arround a target (and attacks)
+      ["UNORA"]         =   {CMD = "unora!",         GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand stops ora
+      ["LINE"]          =   {CMD = "line!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand makes lines across the map
+      ["UNLINE"]        =   {CMD = "unline!",        GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand stops making lines
+      ["MASK"]          =   {CMD = "mask!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand takes the mask off/puts it on
+      ["SAY"]           =   {CMD = "say!",           GUISOUND = "0000000000",  STANDSOUND = "7400228524"}, --Makes the stand say something
+      ["SPAM"]          =   {CMD = "spam!",          GUISOUND = "0000000000",  STANDSOUND = "9062874339"}, --Makes the stand spam something
+      ["UNSPAM"]        =   {CMD = "unspam!",        GUISOUND = "0000000000",  STANDSOUND = "3185951085"}, --Stand stops spamming
+      ["SAVE"]          =   {CMD = "save!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand will save the owner if knocked
+      ["REJOIN"]        =   {CMD = "rejoin!",        GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand rejoins            
+      ["RESET"]         =   {CMD = "reset!",         GUISOUND = "0000000000",  STANDSOUND = "8508727445"}, --Stand resets
+      ["LEAVE"]         =   {CMD = "leave!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand leaves     
+      ["CREW"]          =   {CMD = "crew!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand joins the crew      
+      ["UNCREW"]        =   {CMD = "uncrew!",        GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand leaves the crew              
+      ["DROPCASH"]      =   {CMD = "dropcash!",      GUISOUND = "6714850437",  STANDSOUND = "5785728897"}, --Stand drops cash (if it has cash)
+      ["BASKETBALL"]    =   {CMD = "basketball!",    GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand gets a basketball
+      ["DROPBALL"]      =   {CMD = "dropball!",      GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand drops the basketball
+      ["WALLET"]        =   {CMD = "wallet!",        GUISOUND = "0000000000",  STANDSOUND = "6519564325"}, --Stand shows the wallet
+      ["UNWALLET"]      =   {CMD = "unwallet!",      GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand hides the wallet
+      ["USECODE"]       =   {CMD = "usecode!",       GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand uses all the codes
+      ["CASHAURA"]      =   {CMD = "cashaura!",      GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand turns cashaura on
+      ["UNCASHAURA"]    =   {CMD = "uncashaura!",    GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stand turns cashaura off
+      ["CALLALL"]       =   {CMD = "callall!",       GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Stand calls everyone
+      ["CHAT"]          =   {CMD = "chat!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Turns stand chatting on
+      ["UNCHAT"]        =   {CMD = "unchat!",        GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Turns stand chatting off
+      ["DROP"]          =   {CMD = "drop!",          GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Drops the target (if picked up)
+      ["VOID"]          =   {CMD = "void!",          GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Voids the target
+      ["JAIL"]          =   {CMD = "jail!",          GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Jails the target
+      ["SKY"]           =   {CMD = "sky!",           GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Throws the target from the sky
+      ["PIT"]           =   {CMD = "pit!",           GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Throws the target into the pit
+      ["BANK"]          =   {CMD = "bank!",          GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the bank
+      ["CLUB"]          =   {CMD = "club!",          GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the club
+      ["TRAIN"]         =   {CMD = "train!",         GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the train
+      ["ADMIN"]         =   {CMD = "admin!",         GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the admin base
+      ["SCHOOL"]        =   {CMD = "school!",        GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the school
+      ["CASINO"]        =   {CMD = "casino!",        GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the casino
+      ["UFO"]           =   {CMD = "ufo!",           GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target at the ufo place
+      ["VAULT"]         =   {CMD = "vault!",         GUISOUND = "0000000000",  STANDSOUND = "138080313"}, --Drops the target in the bank vault
+      ["ANNOY"]         =   {CMD = "annoy!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Turns annoy on
+      ["UNANNOY"]       =   {CMD = "unannoy!",       GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Turns annoy off
+      ["ANTILOCK"]      =   {CMD = "anti!",          GUISOUND = "0000000000",  STANDSOUND = "7662729818"}, --Turns antilock on
+      ["UNANTILOCK"]    =   {CMD = "unantilock!",    GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Turns antilock off
+      ["AUTOSAVE"]      =   {CMD = "autosave!",      GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Turns autosave on
+      ["UNAUTOSAVE"]    =   {CMD = "unautosave!",    GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Turns autosave off
+      ["KNOCK"]         =   {CMD = "knock!",         GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Knocks the target
+      ["UNJAIL"]        =   {CMD = "unjail!",        GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Unjails the stand
+      ["AUTOKILL"]      =   {CMD = "autokill!",      GUISOUND = "0000000000",  STANDSOUND = "7204949322"}, --Starts the autokill
+      ["UNAUTOKILL"]    =   {CMD = "unautokill!",    GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stops the autokill
+      ["AUTOSTOMP"]     =   {CMD = "autostomp!",     GUISOUND = "0000000000",  STANDSOUND = "7204949322"}, --Starts the autostomp
+      ["UNAUTOSTOMP"]   =   {CMD = "unautostomp!",   GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stops the autostomp
+      ["GIVECASH"]      =   {CMD = "givecash!",      GUISOUND = "0000000000",  STANDSOUND = "8934032899"}, --Gives the target cash
+      ["ARREST"]        =   {CMD = "arrest!",        GUISOUND = "0000000000",  STANDSOUND = "7204949322"}, --Arrests the target
+      ["WEIGHTFARM"]    =   {CMD = "weightfarm!",    GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Starts the weightfarm
+      ["UNWEIGHTFARM"]  =   {CMD = "unweightfarm!",  GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stops the weightfarm
+      ["LETTUCEFARM"]   =   {CMD = "lettucefarm!",   GUISOUND = "0000000000",  STANDSOUND = "6770036737"}, --Starts the lettucefarm
+      ["UNLETTUCEFARM"] =   {CMD = "unlettucefarm!", GUISOUND = "1012554393",  STANDSOUND = "1012554393"}, --Stops the lettucefarm
+      ["POLICE"]        =   {CMD = "police!",        GUISOUND = "0000000000",  STANDSOUND = "0000000000"}, --Opens the police ui on the stands screen
+    }
+}
